@@ -3180,6 +3180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 5
   velocityRightLeft: 5
+  speedRatio: 5
   joystick: {fileID: 927447837}
 --- !u!54 &1771829651
 Rigidbody:
