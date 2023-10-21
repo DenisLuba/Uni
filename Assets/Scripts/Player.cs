@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,8 +10,8 @@ public class Player : MonoBehaviour
     public float velocity = 1.0F;
     public float velocityRightLeft = 1.0F;
     public float speedRatio = 1.0F;
-    private int life = 100;
-
+    public int life = 100;
+     
     public Text lifeState;
     public FixedJoystick joystick;
 
@@ -27,9 +29,9 @@ public class Player : MonoBehaviour
                 -(joystick.Direction.x * Time.deltaTime * velocityRightLeft)
             );
 
-    public void LifeUpdate(int damage)
+    public void LifeUpdate(int score)
     {
-        life -= damage;
+        life += score;
         lifeState.text = life.ToString();
     }
 }
