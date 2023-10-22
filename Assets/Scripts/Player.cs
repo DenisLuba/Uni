@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -10,7 +11,13 @@ public class Player : MonoBehaviour
     public float velocity = 1.0F;
     public float velocityRightLeft = 1.0F;
     public float speedRatio = 1.0F;
-    public int life = 100;
+    private int life = 100;
+
+    public int Life
+    {
+        get => life;
+        set => life = value < 0 ? 0 : value > 100 ? 100 : value;
+    }
      
     public Text lifeState;
     public FixedJoystick joystick;
@@ -18,8 +25,8 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        print($"Start life = {life}");
-        lifeState.text = life.ToString();
+        print($"Start life = { Life }");
+        lifeState.text = Life.ToString();
     }
 
     // Update is called once per frame
@@ -31,7 +38,13 @@ public class Player : MonoBehaviour
 
     public void LifeUpdate(int score)
     {
-        life += score;
-        lifeState.text = life.ToString();
+        Life += score;
+        lifeState.text = Life.ToString();
+        if (!isAlive())
+        {
+            SceneManager.LoadScene("GameOverScene", LoadSceneMode.Single);
+        }
     }
+
+    private bool isAlive() => life > 0;
 }
