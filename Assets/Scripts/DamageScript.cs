@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class DamageScript : MonoBehaviour
 {
@@ -14,6 +11,5 @@ public class DamageScript : MonoBehaviour
             var player = collision.gameObject.GetComponent<Player>();
             player.LifeUpdate(-score);
         }
-        
     }
 }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 129915083024554124}
-  - component: {fileID: 7410406023197029696}
+  - component: {fileID: 2797111234273183371}
   m_Layer: 0
   m_Name: ItemLife
   m_TagString: Untagged
@@ -25,15 +25,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413547774712337809}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.359344, y: 0.81, z: 1.8130829}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.607338, y: 0.060000002, z: -0.6397252}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9036733467213615443}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &7410406023197029696
+--- !u!95 &2797111234273183371
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -43,7 +43,7 @@ Animator:
   m_GameObject: {fileID: 413547774712337809}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 83e17807a44f0ea48a934c0976be7021, type: 2}
+  m_Controller: {fileID: 9100000, guid: ea66c73eb7aa4374cb083e370d13fa07, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
